@@ -1,2 +1,7 @@
 # Resume-Builder
-Create your resume with a selection of templates offered. Modify online and download your own copy!
+# Authors: 
+[Austin Michaud](https://github.com/foobar404)  
+[Nathaniel Mosco](https://github.com/foobar404)  
+
+## Create your resume with a selection of templates offered. 
+## Modify online and download your own copy!

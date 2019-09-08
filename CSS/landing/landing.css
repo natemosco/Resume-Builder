@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(https://fonts.gstatic.com/s/robotoslab/v9/BngRUXZYTXPIvIBgJJSb6u9mxLCGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v9/BngRUXZYTXPIvIBgJJSb6u92w7CGwRg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v7/neIQzD-0qpwxpaWvjeD0X88SAOeauXQ-pQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Source Serif Pro Semibold'), local('SourceSerifPro-Semibold'), url(https://fonts.gstatic.com/s/sourceserifpro/v7/neIXzD-0qpwxpaWvjeD0X88SAOeasasatSyqwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Source Serif Pro Bold'), local('SourceSerifPro-Bold'), url(https://fonts.gstatic.com/s/sourceserifpro/v7/neIXzD-0qpwxpaWvjeD0X88SAOeasc8btSyqwQ.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2.1rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+p,
+span,
+i,
+b {
+  font-size: 1.6rem;
+  max-width: 60ch;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+header section {
+  width: 50%;
+  height: 100%;
+}
+header #left {
+  background: linear-gradient(200deg, #4dddff, #00B3DE, #007fcf);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #left h1 {
+  color: #18c0e9;
+  text-shadow: 4px 1px 5px #000000ad;
+  overflow: hidden;
+  border-right: 0.15em solid #DE8400;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+header #left #blob-box {
+  -webkit-mask-image: url(../../Media/blob.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 110% -18em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  z-index: 1;
+}
+header #left #blob-box .image {
+  background: url(https://images.template.net/1268/Free-Experienced-Accountant-Resume-Format-440x570-1.jpg) 100% / cover no-repeat;
+  background-position: top;
+  height: 80%;
+  width: 100%;
+  z-index: 2;
+}
+header #left #blob-box .placeholder {
+  height: 50%;
+  width: 100%;
+}
+header #right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #DE8400, #DE6600, #bf470e);
+}
+header #right h3 {
+  color: #cc5409;
+  font-size: 4rem;
+  text-shadow: 4px 1px 5px #000000ad;
+}
+header #right form {
+  background: #0000002b;
+  width: 75%;
+  min-height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 30px;
+}
+header #right form input {
+  width: 48%;
+  padding: 10px 0 10px 5px;
+  border: none;
+  margin: 5px 0;
+  border: 2px solid transparent;
+  background: SNOW;
+}
+header #right form input:hover {
+  border: 2px solid #007fcf;
+}
+header #right form input:focus {
+  outline: none;
+}
+header #right form textarea {
+  resize: none;
+  width: 100%;
+  min-height: 250px;
+  background: SNOW;
+}
+main {
+  height: 100%;
+  width: 100%;
+}

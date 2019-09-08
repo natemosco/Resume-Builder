@@ -1,0 +1,29 @@
+.show{
+    opacity: 1 !important;
+    z-index: 2;
+}
+.hide{
+    opacity:0 !important;
+    z-index: 1;
+}
+
+#template-page{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+
+    #templates{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+
+        .template{
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+            border:2px solid black;
+        }
+    }
+}

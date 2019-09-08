@@ -1,0 +1,12 @@
+{"window.zoomLevel": 3,
+    "emmet.triggerExpansionOnTab": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

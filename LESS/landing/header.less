@@ -1,109 +1,83 @@
 header{
-    height: 100%;
     width: 100%;
-    display: flex;
-    
-    section{
-        width: 50%;
-        height: 100%;
-    }
-    #left{
-        background: linear-gradient(200deg,@blue-light,@blue,@blue-dark);
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    height: 100%;
+    background: linear-gradient(45deg,#00B3DEbf,#9a4dffbf), url(https://images.pexels.com/photos/2867895/pexels-photo-2867895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) 100% / cover;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 
-        h1{
-            color:#18c0e9;
-            text-shadow: 4px 1px 5px #000000ad;
-            overflow: hidden;
-            border-right: .15em solid @orange-light;
-            white-space: nowrap;
-            margin: 0 auto;
-            animation:
-                typing 3.5s steps(40,end), 
-                blink-caret .75s step-end infinite;
-        }
-        @keyframes typing{
-            from {width:0}
-            to {width:65%}
-        }
-        #blob-box{
-            -webkit-mask-image: url(../../Media/blob.svg);
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size:cover;
-            -webkit-mask-position: 110% -18em;
-            position: absolute;
-            bottom:0;
-            left:0;
-            width: 100%;
-            height: 88%;
-            z-index: 1;
-            
-            .image{
-                background: url(https://images.template.net/1268/Free-Experienced-Accountant-Resume-Format-440x570-1.jpg) 100% / cover no-repeat;
-                background-position: top;
-                height: 80%;
-                width: 100%;
-                z-index: 2;
-            }
-            .placeholder{
-                height: 50%;
-                width: 100%;
-            }
-        }
-
-    }
-    #right{
+    .landing-contianer{
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        background: linear-gradient(45deg,@orange-light,@orange,@orange-dark);
-        h3{
-            color:#cc5409;
-            font-size: 4rem;
-            text-shadow: 4px 1px 5px #000000ad;
+        h1{
+            font-size:4.5rem;
+            animation:scale 1s;
         }
-        form{
-            background: #0000002b;
-            width:75%;
-            min-height:50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: inherit;
-            flex-wrap: wrap;
-            padding: 30px;
-            border-radius: 30px;
-            
-            input{
-                width: 48%;
-                padding: 10px 0 10px 5px;
-                border:none;
-                margin: 5px 0;
-                border:2px solid transparent;
-                background: @white;
-                
-            }
-            input:hover{
-                border:2px solid @blue-dark;
-            }
-            input:focus{
-                outline:none;
-            }
-    
-            textarea{
-                resize:none;
-                width: 100%;
-                min-height:250px;
-                background: @white;
-            }
+        i{
+            letter-spacing:2.2px;
+            font-size:1.9rem;
         }
     }
-    
 
+    form{
+        background: #8130302b;
+        width:550px;
+        height:70vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: inherit;
+        flex-wrap: wrap;
+        padding: 30px;
+        border-radius: 30px;
+    }
 
+    input{
+        width: 48%;
+        max-height: 50px;
+        padding: 10px 0 10px 5px;
+        border:none;
+        margin: 5px 0;
+        border:2px solid transparent;
+        background: @white;
+        cursor:pointer;
+    }
+    input:hover{
+        border:2px solid @blue-dark;
+    }
+    input:focus{
+        outline:none;
+    }
+
+    input[type="submit"]{
+        transition: .5s ease;
+        margin-top: 40px;
+        background:@blue-dark;
+        border:2px solid @blue-dark;
+        color:@white;
+        box-shadow:4px 4px 8px 0px #0000004d;
+    }
+
+    input[type="submit"]:hover{
+        background:transparent;
+    }
+
+    textarea{
+        resize:none;
+        width: 100%;
+        min-height:250px;
+        background: @white;
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform:scale(0);
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    100%{
+        transform:scale(1);
+    }
 }
 

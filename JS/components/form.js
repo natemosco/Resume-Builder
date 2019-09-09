@@ -1,29 +1,38 @@
-function Form(){
+function Form(metaProps){
     let formString = `
-    <form autocomplete="on" id="form">
-        <input autofocus type="text" autocomplete="on" name="a" placeholder="Expertise 1">
-        <input type="text" autocomplete="on" name="a" placeholder="Expertise 2">
-        <input type="text" autocomplete="on" name="a" placeholder="Expertise 3">
-        <input type="text" autocomplete="on" name="a" placeholder="Expertise 4">
-        <input type="text" autocomplete="on" name="a" placeholder="Expertise 5">
-
-
-        <input type="text" autocomplete="on" name="lname" placeholder="Last Name">
-        <input type="text" autocomplete="on" name="organization" placeholder="Employer">
-        <input type="text" autocomplete="on" name="organization-title" placeholder="Job Title">
-        <input type="text" autocomplete="on" name="email" placeholder="Email">
-        <input type="text" autocomplete="on" name="address" placeholder="Address">
-        <input type="text" autocomplete="on" name="tel" placeholder="Phone Number">
-        <input type="file" autocomplete="on" name="photo" placeholder="Add your image">
-        <textarea name="about" d="textarea" placeholder=""></textarea>         
+    <form autocomplete="on" id="meta">     
     </form>
     `
-
     const form = html(formString);
-    const inputs = Array.from(form.querySelector("input"));
+    
+    for(let key in metaProps){
+        if(typeof metaProps[key] == "number"){
+            for(let i = 1;i <= metaProps[key];i++){
+                form.append(Input(key));
+            }
+        }
+        if(typeof metaProps[key] == "object"){
+            for(let i = 0;i<metaProps[key].count;i++){
+                for(let innerKey in metaProps[key].obj){
+                    form.append(Input(innerKey));
+                }
+            }
+        }
+    }
+
+    function Input(props){
+        return html(`
+            <div class="">
+                <label for="props">${props}</label>
+                <input type="text" name="${props}"/>
+            </div>  
+        `)
+    }
+
+
+    const inputs = Array.from(form.querySelectorAll("input"));
     inputs.forEach(input=>{
         input.onkeyup = e=>{
-            
             console.log(e.key);
         }
     })

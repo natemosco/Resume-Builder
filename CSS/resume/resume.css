@@ -1,0 +1,42 @@
+#resume-page {
+  display: flex;
+  opacity: 0;
+  z-index: 1 ;
+}
+#resume-page-right {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(135deg, #4dddff94, #de8400a3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#resume-page-left {
+  width: 20%;
+  height: 100%;
+  overflow: auto;
+  background: #007fcf;
+}
+#resume-page-left form {
+  font-size: 2rem;
+}
+#resume-page-left #meta {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#resume-page-left #meta input {
+  width: 90%;
+  padding: 10px 0 10px 5px;
+  border: none;
+  margin: 5px 0;
+  border: 2px solid transparent;
+  background: SNOW;
+}
+#resume-page-left #meta input:hover {
+  border: 2px solid #007fcf;
+}
+#resume-page-left #meta input:focus {
+  outline: none;
+}

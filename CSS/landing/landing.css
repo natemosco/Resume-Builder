@@ -51,6 +51,8 @@ main {
   top: 0;
   left: 0;
   transition: 0.5s;
+  height: 100%;
+  width: 100%;
 }
 h1,
 h2,
@@ -85,78 +87,29 @@ b {
   font-weight: 300;
 }
 header {
-  height: 100%;
   width: 100%;
-  display: flex;
-}
-header section {
-  width: 50%;
   height: 100%;
-}
-header #left {
-  background: linear-gradient(200deg, #4dddff, #00B3DE, #007fcf);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(45deg, #00B3DEbf, #9a4dffbf), url(https://images.pexels.com/photos/2867895/pexels-photo-2867895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) 100% / cover;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-header #left h1 {
-  color: #18c0e9;
-  text-shadow: 4px 1px 5px #000000ad;
-  overflow: hidden;
-  border-right: 0.15em solid #DE8400;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 65%;
-  }
-}
-header #left #blob-box {
-  -webkit-mask-image: url(../../Media/blob.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  -webkit-mask-position: 110% -18em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 88%;
-  z-index: 1;
-}
-header #left #blob-box .image {
-  background: url(https://images.template.net/1268/Free-Experienced-Accountant-Resume-Format-440x570-1.jpg) 100% / cover no-repeat;
-  background-position: top;
-  height: 80%;
-  width: 100%;
-  z-index: 2;
-}
-header #left #blob-box .placeholder {
-  height: 50%;
-  width: 100%;
-}
-header #right {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg, #DE8400, #DE6600, #bf470e);
 }
-header #right h3 {
-  color: #cc5409;
-  font-size: 4rem;
-  text-shadow: 4px 1px 5px #000000ad;
+header .landing-contianer {
+  display: flex;
+  justify-content: center;
 }
-header #right form {
-  background: #0000002b;
-  width: 75%;
-  min-height: 50%;
+header .landing-contianer h1 {
+  font-size: 4.5rem;
+  animation: scale 1s;
+}
+header .landing-contianer i {
+  letter-spacing: 2.2px;
+  font-size: 1.9rem;
+}
+header form {
+  background: #8130302b;
+  width: 550px;
+  height: 70vh;
   display: flex;
   justify-content: space-between;
   align-items: inherit;
@@ -164,25 +117,49 @@ header #right form {
   padding: 30px;
   border-radius: 30px;
 }
-header #right form input {
+header input {
   width: 48%;
+  max-height: 50px;
   padding: 10px 0 10px 5px;
   border: none;
   margin: 5px 0;
   border: 2px solid transparent;
   background: SNOW;
+  cursor: pointer;
 }
-header #right form input:hover {
+header input:hover {
   border: 2px solid #007fcf;
 }
-header #right form input:focus {
+header input:focus {
   outline: none;
 }
-header #right form textarea {
+header input[type="submit"] {
+  transition: 0.5s ease;
+  margin-top: 40px;
+  background: #007fcf;
+  border: 2px solid #007fcf;
+  color: SNOW;
+  box-shadow: 4px 4px 8px 0px #0000004d;
+}
+header input[type="submit"]:hover {
+  background: transparent;
+}
+header textarea {
   resize: none;
   width: 100%;
   min-height: 250px;
   background: SNOW;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 main {
   height: 100%;

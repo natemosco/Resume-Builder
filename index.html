@@ -10,31 +10,31 @@
     <link rel="icon" href="./Media/resume.png">
     <link rel="stylesheet" href="./CSS/landing/landing.css">
     <link rel="stylesheet" href="./CSS/template/template.css">
+    <link rel="stylesheet" href="./CSS/resume/resume.css">
 </head>
 
 <body>
 
-    <main id="template-page">
+    <main id="resume-page" class="hide">
+        <section id="resume-page-left"></section>
+        <section id="resume-page-right"></section>
+    </main>
+
+    <main id="template-page" class="hide">
 
     </main>
 
-    <main id="landing-page">
+    <main id="landing-page" class="show">
         <header>
-            <section id="left">
-                <h1>Resume Builder</h1>
-                <div>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div id="blob-box">
-                    <div class="image"></div>
-                    <div class="placeholder"></div>
-                </div>
 
-            </section>
-            <section id="right">
-                <h3>Resume Data</h3>
-                <form autocomplete="on" id="form">
+            <div class="landing-contianer">
+                <section>
+                    <h1>Resume Builder</h1>
+                    <i>build your own resume, how you want, for free</i>
+                    <input name="submit" type="submit" id="submit" value="Submit ➥">
+                </section>
+
+                <form autocomplete="on" id="form" css="*fs:2rem ">
                     <input autofocus type="text" autocomplete="on" name="fname" placeholder="First Name">
                     <input type="text" autocomplete="on" name="lname" placeholder="Last Name">
                     <input type="text" autocomplete="on" name="organization" placeholder="Employer">
@@ -44,9 +44,9 @@
                     <input type="text" autocomplete="on" name="tel" placeholder="Phone Number">
                     <input type="file" autocomplete="on" name="photo" placeholder="Add your image">
                     <textarea name="about" d="textarea" placeholder="Example ... I am and individual seeking an Accountant position at a retail company that will allow me to learn the process, distribution and sales growth in the corporate world whereby enabling me to contribute to the growth and development of the company"></textarea>
-                    <input name="submit" type="submit" id="submit">
                 </form>
-            </section>
+            </div>
+
         </header>
     </main>
 
@@ -58,6 +58,7 @@
 </body>
 <script src="./JS/global.js"></script>
 <script src="./JS/components/template1.js"></script>
+<script src="./JS/components/form.js"></script>
 <script src="./JS/index.js"></script>
 
 </html>

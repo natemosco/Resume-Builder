@@ -1,10 +1,39 @@
+const template1_meta = {
+    education:{
+        count:3,
+        obj:{
+            Degree:1,
+            Date:1,
+            Univeristy:1
+        }
+    },
+    references:{
+        count:1,
+        obj:{
+            "Reference name":1,
+            "Reference title":1,
+            Workplace:1,
+            Email:1
+        }
+    },
+    expertise:5,
+    certification:{
+        count:3,
+        obj:{
+            "Cert Acquired":1,
+            "Accrediting Body":1,
+            Expiration:1
+        }
+    },
+    SkillsAndHobbies:10,
+}
+
 
 function Template1(props,style=""){
-    console.dir(props)
     const template1String = `
-    <section class="template template1">
-    
-        <div class="template1-banner ${style}">
+    <section class="template1 template" data-component="template1">
+
+        <div class="template1-banner ${style.background}">
             <img class="template1-img" src="${props.photo}" alt="profile avatar"/>
             <div>
                 <h1>${props.fname} ${props.lname}</h1>
@@ -28,38 +57,45 @@ function Template1(props,style=""){
                     <p>${props.expertise5}</p>
                 </div>
                 <div class="template1-education-container">
-                    <h3>Education</h3>
-                               
+                    <h3 class="${style.color}">Education</h3>
+                            
                 </div>
                 <div>
-                    <h3 class="template1-references">References</h3>
+                    <h3 class="template1-references ${style.color}">References</h3>
                     
                 </div>
             </section>
 
             <section class="template1-right">
                 <div>
-                    <h3>Objective</h3>
+                    <h3 class="${style.color}">Objective</h3>
                     <p>${props.about}</p>
                 </div>
                 <div class="template1-job-container">
-                    <h3 class="template1-jobs">Expirence</h3>
-                   
+                    <h3 class="template1-jobs ${style.color}">Expirence</h3>
+                
                 </div>
                 <div class="template1-certification">
-                    <h3>Certifications</h3>
+                    <h3 class="${style.color}">Certifications</h3>
                 </div>
                 <div>
-                    <h3>Skills & Hobbies</h3>
+                    <h3 class="${style.color}">Skills & Hobbies</h3>
                     <ul class="skills-hobbies-container">
                     </ul>
                 </div>
             </section>
 
         </div>
+
+     
     </section>   
     `
     const template1 = html(template1String);
+
+    template1.querySelectorAll("*").forEach(e=>{
+        e.dataset.component = "template1";
+    })
+
 
     function Education(props){
         const educationString = ` <h5 class="template1-degree">${props.degree}</h5>
@@ -122,7 +158,7 @@ function Template1(props,style=""){
     props.certification.forEach(e=>{
         template1.querySelector(".skills-hobbies-container").append(SkillsAndHobbies(e));
     })
-    
+
          
     return template1;
 }

@@ -4,7 +4,8 @@ const template1_meta = {
         obj:{
             Degree:1,
             Date:1,
-            Univeristy:1
+            Univeristy:1,
+            GPA:1
         }
     },
     references:{
@@ -20,16 +21,25 @@ const template1_meta = {
     certification:{
         count:3,
         obj:{
-            "Cert Acquired":1,
-            "Accrediting Body":1,
-            Expiration:1
+            certification:1,
+            accreditingBody:1,
+            expiration:1
         }
     },
-    SkillsAndHobbies:10,
+    skillsAndHobbies:10,
+    experience:{
+        count:2,
+        obj:{
+            job:1,
+            employmentDates:1,
+            title:1,
+            jobDescription:1
+        }
+    }
 }
 
 
-function Template1(props,style=""){
+function Template1(props,style=styles.purple){
     const template1String = `
     <section class="template1 template" data-component="template1">
 
@@ -47,14 +57,14 @@ function Template1(props,style=""){
         
         <div class ="template1-body">
         
-            <section class="template1-left">
+            <section class="template1-left ${style.border}">
                 <div class="template1-expertise">
-                    <h3>Expertise</h3>
-                    <p>${props.expertise1}</p>
-                    <p>${props.expertise2}</p>
-                    <p>${props.expertise3}</p>
-                    <p>${props.expertise4}</p>
-                    <p>${props.expertise5}</p>
+                    <h3 class="${style.color}">Expertise</h3>
+                    <p class="${style.border}">${props.expertise1}</p>
+                    <p class="${style.border}">${props.expertise2}</p>
+                    <p class="${style.border}">${props.expertise3}</p>
+                    <p class="${style.border}">${props.expertise4}</p>
+                    <p class="${style.border}">${props.expertise5}</p>
                 </div>
                 <div class="template1-education-container">
                     <h3 class="${style.color}">Education</h3>
@@ -98,10 +108,10 @@ function Template1(props,style=""){
 
 
     function Education(props){
-        const educationString = ` <h5 class="template1-degree">${props.degree}</h5>
-        <p class="template1-graduation-date">${props.grad-date}</p>
-        <p class="template1-university">${props.university}</p>
-        <p class="template1-gpa">${props.pga}</p>` 
+        const educationString = ` <h5 class="template1-degree">${props.Degree}</h5>
+        <p class="template1-graduation-date">${props.Date}</p>
+        <p class="template1-university">${props.University}</p>
+        <p class="template1-gpa">${props.GPA}</p>` 
 
         return html(educationString);
     }  
@@ -111,10 +121,10 @@ function Template1(props,style=""){
     })
     function References(props){
         const referenceString = ` 
-        <h5 class="template1-ref-firstname template1-ref-lastname">${props.fname} ${props.lname}</h5>
-        <p class="template1-ref-title">${props.refTitle}</p>
-        <p class="template1-ref-workplace">${props.refWorkplace}</p>
-        <p class="template1-ref-email">${props.email}</p>
+        <h5 class="template1-ref-firstname template1-ref-lastname">${props["Reference name"]}</h5>
+        <p class="template1-ref-title">${props["Reference title"]}</p>
+        <p class="template1-ref-workplace">${props.Workplace}</p>
+        <p class="template1-ref-email">${props.Email}</p>
         ` 
 
         return html(referenceString);
@@ -126,7 +136,7 @@ function Template1(props,style=""){
 
     function Experience(props){
         const jobString = ` 
-        <h5 class="template1-job-title">${props.jobs} | ${props.jobDates}</h5>
+        <h5 class="template1-job-title">${props.job} | ${props.employmentDates}</h5>
         <p class="template1-title">${props.title}</p>
         <p class="template1-description">${props.jobDescription}</p>
         ` 

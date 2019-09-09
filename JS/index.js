@@ -1,4 +1,22 @@
+const styles = {
+    orange:{
+        background:"orange-background",
+        color:"orange-color",
+        border:"orange-border",
+    },
+    purple:{
+        background:"purple-background",
+        color:"purple-color",
+        border:"purple-border",
+    },
+    turquoise:{
+        background: "turquoise-background",
+        color:"turquoise-color",
+        border:"turquoise-border",
+    }
+}
 
+let globalTemplate = []
 
 function showResume(e){
     $(".show").classList.add("hide");
@@ -9,8 +27,11 @@ function showResume(e){
 
 
     const template = e.target.dataset.component;
-    $("#resume-page-right").append(template_components[template][0](globalData));
+    let templateComponent = template_components[template][0];
+    globalTemplate[0] = templateComponent;
+    $("#resume-page-right").append(templateComponent(globalData));
     let currentMeta = template_components[template][1];
+    globalTemplate[1] = currentMeta;
     $("#resume-page-left").append(Form(currentMeta));
 }
 

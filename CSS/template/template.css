@@ -26,6 +26,37 @@
 .mini * {
   font-size: 0.2rem;
 }
+.mini img {
+  height: 30px !important;
+  width: 30px !important;
+}
+.orange-background {
+  background: orange !important;
+}
+.orange-color {
+  color: orange !important;
+}
+.orange-border {
+  border-color: orange !important;
+}
+.purple-background {
+  background: purple !important;
+}
+.purple-color {
+  color: purple !important;
+}
+.purple-border {
+  border-color: purple !important;
+}
+.turquoise-background {
+  background: turquoise !important;
+}
+.turquoise-color {
+  color: turquoise !important;
+}
+.turquoise-border {
+  border-color: turquoise !important;
+}
 .template {
   height: 85%;
   width: 600px;
@@ -42,9 +73,11 @@
   color: #555;
 }
 .template1-banner {
+  padding: 30px 0;
   background: #0c4b6f;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .template1-banner h1,
 .template1-banner h3 {
@@ -63,6 +96,8 @@
   border-radius: 50%;
   margin-right: 2%;
   z-index: 2;
+  height: 150px;
+  width: 150px;
 }
 .template1-body {
   display: flex;

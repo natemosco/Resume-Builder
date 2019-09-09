@@ -26,6 +26,11 @@
   flex-direction: column;
   align-items: center;
 }
+#resume-page-left #meta .input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 #resume-page-left #meta input {
   width: 90%;
   padding: 10px 0 10px 5px;
